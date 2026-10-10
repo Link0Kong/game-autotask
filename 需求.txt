@@ -1,0 +1,14 @@
+请用python写一个包含以下功能的程序：
+要求：请确保将输出的代码无需其他改动即可完整运行所有功能，尽可能精简代码但不要影响任何一个功能的完整运行。此程序将使用pyintsaller包装为exe文件后使用Windows自带的任务计划程序运行，请确保此程序内的代码不会因此受到影响。
+步骤
+1.在运行开始时"C:\autoapps\今日日志.txt"的全部内容删除
+2.把接下来的每一步的描述+当前时间追加进"C:\autoapps\今日日志.txt"中（日志追加采用“[当前年份/当前月份/当前日期 当前小时：当前分钟：当前秒数】”+步骤描述）
+3.打开"C:\autoapps\明日方舟\MAA.exe"并等待程序关闭
+4.确保第一个程序进程关闭30秒且未重启后打开"C:\Program Files\miHoYo Launcher\games\Star Rail Game\StarRail.exe"并在等待5秒后打开"C:\autoapps\崩坏星穹铁道\March7thAssistant_v2025.1.20_full\March7th Assistant.exe"（python在开启此程序后不再操控此程序且无视所有应用行为，路径中的“March7thAssistant_v2025.1.20_full”会随版本变化而改变，具体命名规则为"March7thAssistant_v"+版本号（可能为任意字符串）+“_full”请确保名称的变化不会影响程序的运行）
+5.等待"C:\Program Files\miHoYo Launcher\games\Star Rail Game\StarRail.exe"关闭（用最可靠的方式确保在该进程停止后的第一时间能进行下一步）
+6.若StarRail.exe没有在关闭三十秒内重启，则检测"C:\autoapps\崩坏星穹铁道\March7thAssistant_v2025.1.20_full\logs"文件夹中的名称为“年-月-日.log”(例如今日为2025年2月5日，则文件名为"2025-2-5.log")的文件中是否含有“每日实训奖励完成”和“无名勋礼奖励完成”的文本，若未包含则重启4-6步骤
+7.发出标题为“任务完成”，内容为当前时间并加上"C:\autoapps\今日日志.txt"中的内容的邮件（发出邮箱和接收邮箱都为***REMOVED***，密码为“{{SMTP_AUTH_CODE}}”，smtp服务器为"smtp.qq.com"，smtp端口为587）
+8.将"C:\autoapps\今日日志.txt"的内容追加到"C:\autoapps\日志.txt"中，并与前文做一定隔断使更容易分辨不同日期的内容
+7.在控制台发出关机提示，并给出“确认”，“取消”按钮，如果用户按下取消则可以取消关机，点击确认或无操作十秒后立刻关机（在倒计时期间保持窗口置顶，关机不要给任何多余的提示)
+注意：当MAA.exe或StarRail.exe连续运行一小时而未关闭时需重启软件，程序需尽可能保证稳定的运行，可设置一些冗余代码
+ 

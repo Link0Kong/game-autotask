@@ -1,0 +1,8 @@
+今日日志.txt
+日志.txt
+task_flag.txt
+__pycache__/
+*.pyc
+dist/
+build/
+*.spec
