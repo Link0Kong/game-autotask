@@ -74,9 +74,9 @@ class Config:
     # 邮件配置
     SMTP_SERVER = "smtp.qq.com"
     SMTP_PORT = 465
-    SENDER_EMAIL = "***REMOVED***"
-    RECEIVER_EMAIL = "***REMOVED***"
-    EMAIL_PASSWORD = "{{SMTP_AUTH_CODE}}"
+    SENDER_EMAIL = os.environ.get("SMTP_SENDER", "")
+    RECEIVER_EMAIL = os.environ.get("SMTP_RECEIVER", "")
+    EMAIL_PASSWORD = os.environ.get("SMTP_PASSWORD", "{{SMTP_AUTH_CODE}}")
     
     # 删除版本匹配模式
     
